@@ -1,0 +1,17 @@
+{
+  "name": "roku-controller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "script": "node script.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^2.4.1",
+    "dayjs": "^1.11.9"
+  }
+}
