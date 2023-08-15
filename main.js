@@ -25,7 +25,7 @@ function look_for_checkin () {
   const now = dayjs();
 
   const diff = checkin_time_d.diff(now, 'hour', true);
-  console.log(`hours until checking: ${diff}`);
+  console.log(`hours until checkin: ${diff}`);
   if (diff < 1.0 && diff >= 0.0) {
     // checkin time is within 1 hour, 
     // read checkin_activated.json
