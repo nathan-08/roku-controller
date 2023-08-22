@@ -5,13 +5,16 @@
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
-    "script": "node script.js"
+    "set_date": "node scripts/set_date.js",
+    "find_roku": "node scripts/find_roku.js",
+    "power_on": "node scripts/power_on.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cron": "^2.4.1",
-    "dayjs": "^1.11.9"
+    "dayjs": "^1.11.9",
+    "rokujs": "^1.2.0"
   }
 }

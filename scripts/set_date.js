@@ -1,8 +1,7 @@
-/// This script sets the date on the mockdata.json file
 const fs = require('fs');
 const dayjs = require('dayjs');
 
-data = fs.readFileSync('../mockdata.json')
+data = fs.readFileSync('../../mockdata.json')
 json = JSON.parse(data);
 
 const now = dayjs();

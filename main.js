@@ -1,7 +1,7 @@
 const fs = require('fs');
 const dayjs = require('dayjs');
 const CronJob = require('cron').CronJob;
-const activate_roku = require('./activate_roku');
+const roku = require('./roku_functions');
 
 const every_15_min = '*/15 * * * *';
 const every_10_sec = '*/10 * * * * *';
@@ -13,6 +13,8 @@ const job = new CronJob(
 );
 
 function look_for_checkin () {
+  /// This will check if the next scheduled checkin is to occur within the next hour. 
+  /// If so, it calls activate_roku with guest information
   console.log('running look_for_checkin');
   const data = JSON.parse(
     fs.readFileSync('../mockdata.json'));
@@ -42,7 +44,7 @@ function look_for_checkin () {
       });
       return;
     }
-    activate_roku(guest);
+    roku.activate_roku(guest);
     write_history(user_id, property_id, checkin_time);
   }
   else {
