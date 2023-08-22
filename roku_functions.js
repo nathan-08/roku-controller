@@ -9,6 +9,8 @@ module.exports.activate_roku = ({first_name, last_name}) => {
 }
 
 
+const addr1 = '192.168.1.53'
+const addr2 = '192.168.1.144'
 module.exports = {
   discover: () => {
     /* example response
@@ -29,8 +31,13 @@ module.exports = {
     // do thing...
 
   },
+  test: () => {
+	  const roku = new Roku(addr2);
+	  console.log('device info:');
+	  roku.deviceInfo( console.log );
+  },
   power_on: () => {
-    const roku = new Roku('roku-address');
+    const roku = new Roku(addr2);
     console.log('getting device info');
     roku.deviceInfo( (info) => {
       console.log('power_on for device:');
